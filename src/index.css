@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html,
+  body,
+  #root {
+    @apply h-full w-full bg-hero-pattern bg-no-repeat bg-cover
+  }
+}
+
+
+
+.mouse-cursor-gradient-tracking {
+  width: 200px;
+  position: fixed;
+  background:transparent;
+  overflow: hidden;
+  cursor: none;
+  justify-content: center;
+}
+
+.mouse-cursor-gradient-tracking::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, pink, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.mouse-cursor-gradient-tracking:hover::before {
+  --size: 100px;
+}
