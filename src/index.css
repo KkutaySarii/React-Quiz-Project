@@ -7,19 +7,20 @@
   html,
   body,
   #root {
-    @apply h-full w-full bg-hero-pattern bg-no-repeat bg-cover
+    @apply h-full w-full  bg-background flex justify-center 
   }
 }
 
 
 
+
 .mouse-cursor-gradient-tracking {
-  width: 200px;
   position: fixed;
   background:transparent;
   overflow: hidden;
   cursor: none;
   justify-content: center;
+  font-weight: 700;
 }
 
 .mouse-cursor-gradient-tracking::before {
